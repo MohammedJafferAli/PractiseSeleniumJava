@@ -58,7 +58,6 @@ public class PraciseDDPassangerList {
             passanger.click();
         }
 
-
     }
 
     public static void removePassngers(WebDriver driver, String typeOfPassanger, int noOfPassangers) {
