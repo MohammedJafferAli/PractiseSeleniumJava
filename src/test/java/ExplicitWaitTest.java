@@ -8,10 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
-
 
 public class ExplicitWaitTest {
 
@@ -38,12 +34,9 @@ public class ExplicitWaitTest {
         //Wait for the promocode to apply
         WebElement promoApplied = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".promoInfo")));
 
-        if (promoApplied.isDisplayed())
-        {
+        if (promoApplied.isDisplayed()) {
             System.out.println(promoApplied.getText());
-        }
-        else
-        {
+        } else {
             System.out.println("Exception in applying promo");
         }
         driver.quit();
