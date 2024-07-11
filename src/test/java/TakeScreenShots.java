@@ -9,22 +9,24 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class TakeScreenShots {
+
+    private static WebDriver driver; //Define driver Object a Class Member
     public static void main(String[] args) throws IOException {
         //Setup driver
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://www.javatpoint.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //recommended to create a separate method for reusability
         String titleOfThePage = driver.getTitle();
-        TakeScreenShot(titleOfThePage,driver);
+        TakeScreenShot(titleOfThePage);
 
         driver.close();
 
     }
 
-    public static void TakeScreenShot(String FileName, WebDriver driver) throws IOException {
+    public static void TakeScreenShot(String FileName) throws IOException {
 
         // Create File object and save screenshot of current webpage inside it
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
