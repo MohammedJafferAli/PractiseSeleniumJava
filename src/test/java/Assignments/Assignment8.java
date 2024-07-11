@@ -18,10 +18,7 @@ public class Assignment8 {
         driver.manage().window().maximize();
 
         selectTheCountry("uni", "United Kingdom (UK)");
-
-
         driver.close();
-
     }
 
     public static void selectTheCountry( String partialName, String countryName) throws InterruptedException {
@@ -42,7 +39,6 @@ public class Assignment8 {
                 Thread.sleep(500);
             }
         }
-
         System.out.println(inpCountry.getAttribute("value"));
     }
 }
