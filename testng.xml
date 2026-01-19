@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="ExcelDownloadUploadSuite">
-    <test name="ExcelDownloadModifyUploadTest">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Suite" parallel="tests" thread-count="3">
+    
+    <test name="Login Tests" parallel="methods" thread-count="2">
         <classes>
-            <class name="ExcelDownloadModifyUploadTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.ImplicitWaitTest"/>
+            <class name="tests.FindElementsByLocators"/>
+            <class name="tests.FindElementsByXpath"/>
+            <class name="tests.FindElementByCssSelector"/>
         </classes>
     </test>
+    
+    <test name="Dropdown Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="tests.AutoSuggestDropDownCountry"/>
+            <class name="tests.DynamicDropDownSelectCity"/>
+            <class name="tests.PractiseStaticDropDown"/>
+            <class name="tests.PraciseDDPassangerList"/>
+        </classes>
+    </test>
+    
+    <test name="Alert and Window Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="tests.AcknowledgeAlert"/>
+            <class name="tests.GetAlertMessage"/>
+            <class name="tests.HandleWindowsUsingIterator"/>
+            <class name="tests.HandleWindowsUsingLoop"/>
+        </classes>
+    </test>
+    
+    <test name="Table and Pagination Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="tests.WebTables"/>
+            <class name="tests.WebTableGetPrice"/>
+            <class name="tests.Pagination"/>
+        </classes>
+    </test>
+    
+    <test name="Actions and Frames Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="tests.ActionsTest"/>
+            <class name="tests.FramesTest"/>
+            <class name="tests.CheckBoxes"/>
+        </classes>
+    </test>
+    
+    <test name="Advanced Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="tests.ExcelDownloadModifyUploadTest"/>
+            <class name="tests.ExplicitWaitTest"/>
+            <class name="tests.HandleCalenderToday"/>
+            <class name="tests.NavigationUsingSelenium"/>
+            <class name="tests.PageScrollingUsingJSExecutor"/>
+            <class name="tests.TakeScreenShots"/>
+        </classes>
+    </test>
+    
 </suite>
